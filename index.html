@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lego MindStorm Homepage</title>
+
+    <link rel="stylesheet" href="./CSS/CS1102_homepage.css" type="text/css" media="all"/>
+
+    <script>
+        function init(){
+            var a = handle_video_text();
+        }
+
+        function video_text(){
+            var videoText = new Array("Lego MindStorm Tricky Robot - Slam Dunk", "CS1102 Project Group 2 for Lab_5_Mon_1300",
+            "Engineered by Ting Siu Shing, Yang Guangyulu, Hong Binghui");
+            return videoText[Math.floor(Math.random()*3)]; 
+        }
+    
+        function handle_video_text(){
+            document.getElementById('messagee').innerHTML = video_text();
+            setTimeout("handle_video_text()", 3*1000);
+        }
+
+    </script>
+
+</head>
+<body onload="init();">
+<!-- header -->
+
+    <header>
+        <div id="header">
+        <div id="div1">
+            <img src="./images/logo.png" alt="Lego Mindstorm Logo">
+        </div>
+        </div>
+
+    </header>
+
+  <div id="welcome">
+    <p id="welcomeText">CS1102 Project (2022-2023 Semester A) - Group 2 for Lab5_Mon_1300 - Our Experience with Lego Mindstorm (Ting Siu Shing, Yang Guangyulu, Hong Binghui)</p>
+    <p>Link to <a href="../Text/Project Group for Lab5_Mon_1300 2.docx" target="blank">WORD File</a></p>
+    <p>Link to <a href="../Video/Project Group for Lab5_Mon_1300 2.mp4" target="blank">VIDEO</a></p>
+  </div>
+  <br><br><br>
+  <!-- infomation-->
+  <div id="body1">
+
+    <div id="info">    
+        <table>
+            <caption>Student ID and Workload percentage</caption>
+            <thead>
+              <th>Ting Siu Shing</th>
+              <th>Yang Guangyulu</th>
+              <th>Hong Binghui</th>
+            </thead>
+            <tr>
+              <td>56201081</th>
+              <td>55721120</td>
+              <td>56177629</td>
+            </tr>
+            <tr>
+              <td>100%</td>
+              <td>100%</td>
+              <td>100%</td>
+            </tr>
+          </table>
+        <hr>
+        <dl>
+            <dt>Background</dt><br>
+                <dd>We use the MINDSTORMS app, which is a software that offers a platform to write and create robot instructions to order it. 
+                The Lego robot that we employ goes by the name "Tricky." We built our robot with motors and sensors and order it to pick up the ball and 
+                score the slam dunk by using python programming.</dd><br>
+            <dt>Application</dt><br>
+                <dd>In addition to controlling robots by Python programming, Python can also be used for other applications such as web application development, game development, 
+                artificial intelligence, data analysis, and many more.</dd><br>
+            <dt>Main Functions</dt><br>
+                <dd>Some crucial parts and functions are included in the MINDSTORMS app:<br>
+                Motors: With motors, the robot can be powered to move at a fixed speed.<br><br>
+                Distance sensor: This sensor can gauge how far away the closest obstruction is from it.<br><br>
+                Color sensor: This sensor has the function of detecting the color of objects that are in front of the camera.<br><br>
+                Hub: The hub is in charge of communicating program instructions to each motor and sensor. <br><br></dd>
+            <dt>Building Lego Robot "Tricky"</dt><br>
+                <dd><img src="./images/Making_Lego1.jpg" alt="Making Lego Tricky" id="makingTricky"></dd>   
+        </dl>
+        <h2>Experience</h2>
+            <ol>
+                <li>Firstly, we assembled the robot and the basket to form the Tricky model according to MINDSTORMS’s LEGO tutorial.</li><br>
+                <li>Secondly, we learnt the file Tutorial for Python and explore the Python functionalities of MINDSTORMS.</li><br>
+                <li>Thirdly, we wrote our own code in Python. We reset the robot’s arm to a horizontal position. When the distance sensor senses the object is 
+                    closer than 6 cm, the motor will stop, lifting its arm to pick up the ball. After that, Tricky moves backwards for 30 cm, then lifting arm to score the slam dunk.</li><br>
+                <li>Finally, we placed the robot, the basket and the basketball in their respective places and ran the code to record the robot's reaction <br>VIDEO DEMO--&gt</li>
+            </ol>
+            
+        <h2>Dicovery</h2>
+            <p class="discovery">We discover there are many similarities between Scratch and Python. We can set the robot to do certain actions when certain conditions are met. 
+                In Scratch, we can drag Control-wait until D is closer than 6 cm and Movement-stop moving in the Scripts area. 
+                In Python, we write code: distance_sensor.wait_for_distance_closer_than(6,‘cm’) and movement_ motors . stop(). They achieved the same effect. 
+            </p>
+            <p class="discovery">In addition, we found that the LEGO Hub itself is a program system which can accept input and produce output.</p>
+            <div id="alignHub">
+            <img src="./images/hub_breakdown.jpg" alt="Lego Mindstorm Hub componenent" id="hub">
+            </div>
+    </div>
+
+  <!-- video -->
+    <div id="promotion_information">
+      <h2 id="messagee">Lego MindStorm Tricky Robot - Slam Dunk</h2>
+      <div id="dvideo">
+        <video controls autoplay muted id="Video1" loop>
+          <source src="./Lego_Mindstorm_Video.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <br>
+  <!-- form -->
+    <div id="code">
+        <p id="title">Python Code for Project</p>
+        <img src="./images/Python_Code_for_Tricky.jpg" alt="Python Code for Lego Robot Tricky" id="pythonCode">
+
+    </div>
+  </div>
+
+  <!-- footer block -->
+  <footer id="ft"> 
+    <p>&lt-- Designed by Ting Siu Shing, Yang Guangyulu and Hong Binghui. <span>Link to techniques demonstrated in 
+        webpage and references</span> <a href="./CS1102_Design_Page.html" target="blank">Design Page</a> --></p>
+    
+  </footer>
+    
+</body>
+</html>
