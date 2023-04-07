@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta tages used for search engine optimization-->
+    <meta name="author" content="galaxy.io"/>
+
+    <meta name="description" content="This is the landing page for TravelGPT, 
+    an AI travel assitant aiming to customize your travel experience"/>
+    
+    <meta name="keywords" content="travel, AI, GPT, customization, intelligent, chatbot, tour guide"/>
+    
+
+    <title>TravelGPT Homepage</title>
+
+    <link rel="stylesheet" href="./CS1102_homepage.css" type="text/css" media="all"/>
+
+    <script>
+        function init(){
+            var a = handle_video_text();
+        }
+
+        function video_text(){
+            var videoText = new Array("TravelGPT", "Developed by Galaxy.io",
+            "Engineered by Duke, Gazza, Natalie Shore and Yaxuan");
+            return videoText[Math.floor(Math.random()*3)]; 
+        }
+    
+        function handle_video_text(){
+            document.getElementById('messagee').innerHTML = video_text();
+            setTimeout("handle_video_text()", 3*1000);
+        }
+
+    </script>
+
+</head>
+<body onload="init();">
+<!-- header -->
+
+    <header>
+        <div id="header">
+          <h1 id="title">The Future of Travel</h1>
+          <img src="./images/logo_white.jpg" alt="travelgpt logo" id="logo">
+        </div>
+
+    </header>
+
+  <div id="welcome">
+    <p id="welcomeText">Welcome to your personalized AI travel assistant</p>
+  </div>
+  <br><br><br>
+  <!-- infomation-->
+  <div id="body1">
+
+    <div id="info">    
+        <dl>
+            <dt>What is TravelGPT</dt><br>
+                <dd>TravelGPT is an AI chatbot that generates human like responses for any questions you ask related to 
+                  leisure and travelling. Leveraging our 50-billion parameter large language model we have gathered from proprietary sources,
+                  we aim to achieve the following purpose:
+                  <ol>
+                    <li>To create customized travel recommendation for all customers.</li>
+                    <br>
+                    <li>To become their personal tour guide when they are at the place they are visiting.</li>
+                  </ol>
+                </dd><br>
+            <dt>How to use it</dt><br>
+                <dd>It’s a kind of real-time travel planning conversation model. Generally speaking, this is an artificial intelligence conversation model for travel. 
+                  It can intelligently understand the customer's travel needs in the form of chatting, and combine IoT and big data to accurately customize travel plans.
+                  For your own experience, you may try it here: <br><br>
+                  <h3><a id="interface" href="./IS2502_Interface.html" target="blank">Try TravelGPT</a></h3><br>
+
+                  You may also take a loot at the usage scenario below:<br><br>
+                  E.g. assumes that the client has a relatively clear long-term travel plan, which is what most people do nowadays before they travel. 
+                  The time for travel is determined months in advance, and then detailed plans are determined by searching information.
+                </dd><br>                
+            <dt>Our Motto</dt><br>
+                <dd><img src="./images/Intro_Post.jpg" alt="our motto" id="our_motto"></dd><br>  
+        </dl>
+        <h2>Link to our promotion channels</h2>
+            <ol>
+                <li>Facebook <a href="https://www.facebook.com/profile.php?id=100089851782710" target="blank">Link</a></li><br>
+                <li>Instagram <a href="https://www.instagram.com/galaxybusiness_test/" target="blank">Link</a></li><br>
+                <li>Twitter <a href="https://twitter.com/Is2502_Galaxy" target="blank">Link</a> </li><br>
+            </ol>
+    </div>
+
+  <!-- video -->
+    <div id="promotion_information">
+      <h2 id="messagee">Lego MindStorm Tricky Robot - Slam Dunk</h2>
+      <div id="dvideo">
+        <video controls autoplay muted id="Video1" loop>
+          <source src="./Sample_vid.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <br>
+  <!-- form -->
+    <div id="code">
+        <h2 id="methods">Reinforcement Learning Model</h2><hr>
+        <img id="method" src="./images/Training_method.jpg" alt="AI model training method">
+
+    </div>
+  </div>
+  <br>
+
+  <!-- footer block -->
+  <footer id="ft"> 
+    <div id="ft_background">
+      <p>© Designed by Galaxy | Wang Jiaxuan, Jiang Yaxuan, Hong Binghui, Du Zhuofan, Cai Yuzhi</p>
+    </div>
+    
+  </footer>
+    
+</body>
+</html>
