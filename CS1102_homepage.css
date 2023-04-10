@@ -1,5 +1,4 @@
-@import url("./CS1102_design.css");
-/*embedded "design.css" to include additional styles for #welcome and footer*/
+/*homepage design*/
 #header{
     border: solid white;
     margin: auto;
